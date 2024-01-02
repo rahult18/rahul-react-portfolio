@@ -2,11 +2,10 @@ import { useEffect, useState } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 import { IoCodeSlashOutline } from "react-icons/io5";
-import { Link, useNavigate } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 import "../navbar.scss";
 
 function NavBar() {
-    const navigate = useNavigate();
     const [menuOpen, setMenuOpen] = useState(false);
     const [size, setSize] = useState({
         width: 0,
@@ -34,11 +33,15 @@ function NavBar() {
         setMenuOpen((p) => !p);
     };
 
+    const closeMenuHandler = () => {
+        setMenuOpen(false);
+    };
+
     return (
         <header className="header">
             <div className="header__content">
-                <Link to="/" className="header__content__logo">
-                    <IoCodeSlashOutline />
+                <Link to="#home" className="header__content__logo" smooth duration={700}>
+                    <IoCodeSlashOutline color="#0984e3" style={{marginTop:"0.6rem"}}/>
                 </Link>
                 <nav
                     className={`${"header__content__nav"} 
@@ -46,23 +49,32 @@ function NavBar() {
           }`}
                 >
                     <ul>
-                        <li>
-                            <Link to="/about">About</Link>
+                    <li>
+                            <Link to="#home" smooth duration={600} onClick={closeMenuHandler}>Home</Link>
                         </li>
                         <li>
-                            <Link to="/experience">Experience</Link>
+                            <Link to="#about" smooth duration={600} onClick={closeMenuHandler}>About</Link>
                         </li>
                         <li>
-                            <Link to="/projects">Projects</Link>
+                            <Link to="#experience" smooth duration={600} onClick={closeMenuHandler}>Experience</Link>
                         </li>
                         <li>
-                            <Link to="/skills">Skills</Link>
+                            <Link to="#projects" smooth duration={600} onClick={closeMenuHandler}>Projects</Link>
                         </li>
                         <li>
-                            <Link to="/interests">Interests</Link>
+                            <Link to="#certifications" smooth duration={600} onClick={closeMenuHandler}>Certifications</Link>
                         </li>
                         <li>
-                            <Link to="/contact-me">Contact Me</Link>
+                            <Link to="#skills" smooth duration={600} onClick={closeMenuHandler}>Skills</Link>
+                        </li>
+                        <li>
+                            <Link to="#education" smooth duration={600} onClick={closeMenuHandler}>Education</Link>
+                        </li>
+                        <li>
+                            <Link to="#interests" smooth duration={600} onClick={closeMenuHandler}>Interests</Link>
+                        </li>
+                        <li>
+                            <Link to="#contact-me" smooth duration={600} onClick={closeMenuHandler}>Contact Me</Link>
                         </li>
                     </ul>
                 </nav>
