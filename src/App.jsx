@@ -26,7 +26,6 @@ const App = () => {
       }).then(() => {
         setInit(true);
       });
-      document.title = "Rahul's Portfolio";
     }, []);
 
     const particlesLoaded = (container) => {
@@ -127,14 +126,20 @@ const App = () => {
                         id="tsparticles"
                         particlesLoaded={particlesLoaded}
                         options={options} />
+                        {/* <hr /> */}
                     </>
                 ) 
             }
             <AboutPage/>
+            {/* <hr /> */}
             <ExperiencePage/>
+            {/* <hr /> */}
             <ProjectsPage/>
+            {/* <hr /> */}
             <SkillsPage/>
+            {/* <hr /> */}
             <InterestsPage/>
+            {/* <hr /> */}
             <ContactMePage/>
         </BrowserRouter>
     );
