@@ -3,6 +3,7 @@ import { FiDownload } from "react-icons/fi";
 import { Link } from 'react-router-dom';
 
 
+
 const LandingPage = () => {
     const [ text ] = useTypewriter({
         words: ['CS Graduate', 'Full Stack Developer', 'Data Alchemist', 'Technophile'],
