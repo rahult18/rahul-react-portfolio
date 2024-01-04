@@ -11,7 +11,7 @@ const ExperiencePage = () => {
         <section id="experience">
             <div className="main-content">
                 <h3 className="heading">Work Experience</h3>
-                <VerticalTimeline lineColor="#e5e7eb">
+                <VerticalTimeline lineColor="#0984e3">
                     {
                         experienceData.map((item, index) => (
                             <React.Fragment key={index}>
@@ -29,7 +29,8 @@ const ExperiencePage = () => {
                                     iconStyle={
                                         {
                                             background:"white",
-                                            fontSize: "1.5rem"
+                                            fontSize: "1.5rem",
+                                            border: "2px solid #0984e3"
                                         }
                                     }
                                     className="vertical-timeline-element"
