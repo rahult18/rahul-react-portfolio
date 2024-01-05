@@ -132,7 +132,7 @@ const App = () => {
             <ExperiencePage />
             <hr />
             <ProjectsPage />
-            <hr />
+            <hr style={{ marginTop:"20px" }}/>
             <SkillsPage />
             <hr />
             <InterestsPage />
