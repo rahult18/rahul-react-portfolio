@@ -4,6 +4,7 @@ import { projectData } from "../resources/data";
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 const ProjectsPage = () => {
+    
     const [expandedCard, setExpandedCard] = useState(null);
 
     const handleCardInteraction = (index, screenSize) => {

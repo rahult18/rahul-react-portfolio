@@ -4,7 +4,6 @@ import AboutPage from './components/AboutPage';
 import ExperiencePage from './components/ExperiencePage';
 import ProjectsPage from './components/ProjectsPage';
 import SkillsPage from './components/SkillsPage';
-import InterestsPage from './components/InterestsPage';
 import ContactMePage from './components/ContactMePage';
 import NavBar from './components/NavBar';
 import { BrowserRouter } from 'react-router-dom';
@@ -132,10 +131,8 @@ const App = () => {
             <ExperiencePage />
             <hr />
             <ProjectsPage />
-            <hr style={{ marginTop:"20px" }}/>
+            <hr/>
             <SkillsPage />
-            <hr />
-            <InterestsPage />
             <hr />
             <ContactMePage />
           </>

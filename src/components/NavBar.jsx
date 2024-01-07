@@ -68,9 +68,6 @@ function NavBar() {
                             <Link to="#education" smooth duration={600} onClick={closeMenuHandler}>Education</Link>
                         </li>
                         <li>
-                            <Link to="#interests" smooth duration={600} onClick={closeMenuHandler}>Interests</Link>
-                        </li>
-                        <li>
                             <Link to="#contact-me" smooth duration={600} onClick={closeMenuHandler}>Contact Me</Link>
                         </li>
                     </ul>
