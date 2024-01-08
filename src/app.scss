@@ -105,7 +105,7 @@ section#about {
     justify-content: center;
     align-items: center;
     overflow-y: auto;
-    background-color:  rgba(255, 255, 255, .08);
+    background-color: rgba(255, 255, 255, .08);
 }
 
 div.about-me {
@@ -199,7 +199,7 @@ section#experience {
 section#projects {
     width: 100%;
     padding: 10px;
-    background-color:rgba(255, 255, 255, .08);
+    background-color: rgba(255, 255, 255, .08);
 
     div.main-container {
         display: flex;
@@ -335,13 +335,13 @@ section#skills {
         }
     }
 
-    div.main-container{
+    div.main-container {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
 
-        @media screen and (max-width:49em){
+        @media screen and (max-width:49em) {
             flex-direction: column;
         }
     }
@@ -392,7 +392,7 @@ section#skills {
             img {
                 width: 90%;
                 height: 90%;
-                
+
             }
 
             &:hover {
@@ -424,53 +424,166 @@ section#skills {
         }
     }
 
-    div.certifications-container{
+    div.certifications-container {
         font-size: 16px;
-        margin-top:1.5rem;
+        margin-top: 1.5rem;
+
         .certifications-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 10px;
             margin-bottom: 10px;
-          
+
             @media (max-width: 767px) {
-              flex-direction: column;
-              align-items: flex-start;
-          
-              .certification-title {
-                margin-bottom: 5px;
-              }
+                flex-direction: column;
+                align-items: flex-start;
+
+                .certification-title {
+                    margin-bottom: 5px;
+                }
             }
-          
+
             .certification-title {
-              flex: 1;
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis;
-              letter-spacing: .2px;
-              text-decoration: none;
-              cursor: pointer;
-              color: black;
+                flex: 1;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                letter-spacing: .2px;
+                text-decoration: none;
+                cursor: pointer;
+                color: black;
 
-              &:hover {
-                color: #0984e3;
-              }
+                &:hover {
+                    color: #0984e3;
+                }
 
             }
-          
+
             .certification-year {
-              flex-shrink: 0;
-              margin-left: 10px;
-              color: grey;
-              opacity: .9;
+                flex-shrink: 0;
+                margin-left: 10px;
+                color: grey;
+                opacity: .9;
 
-              @media screen and (max-width:767px) {
-                margin-left: 0;
-              }
+                @media screen and (max-width:767px) {
+                    margin-left: 0;
+                }
 
             }
-          }
-          
+        }
+
+    }
+}
+
+section#education {
+    padding: 10px;
+    background: rgba(255, 255, 255, .08);
+
+    h3.heading {
+        font-size: 25px;
+        margin-left: 20px;
+        font-family: 'Poppins', sans-serif;
+        text-align: left;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        text-align: center;
+
+        @media screen and (max-width: 49em) {
+            font-size: 20px;
+        }
+    }
+
+    div.main-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom:30px;
+
+        div.education-list {
+            display: grid;
+            gap:30px;
+
+            justify-content: center;
+            align-items: center;
+            margin-top:30px;
+
+            
+
+            div.education-item {
+                display: grid;
+                grid-template-columns: 150px 1fr;
+                gap:20px;
+                align-items: center;
+
+                @media screen and (max-width: 49em) {
+                    grid-template-columns: 1fr;
+                }
+                
+
+                div.education-icon svg{
+                    width: 100%;
+                    height: 150px;
+                }
+
+                div.education-icon img{
+                    width: 225px;
+                    height: 225px;
+                }
+
+                div.education-info {
+                    font-size: 18px;
+                    line-height: 1.4;
+                    padding: 5px;
+
+                    @media screen and (max-width:49em) {
+                        font-size: 16px;
+                        text-align: center;
+                    }
+
+                    p.degree{
+                        letter-spacing: .4px;
+                        color: #0984e3;
+                    }
+
+                    p.title{
+                        letter-spacing: .25px;
+                        color: #0984e3;
+                    }
+
+                    p.year, p.gpa{
+                        font-size: 17px;
+
+                        @media screen and (max-width:49em) {
+                            font-size: 15px;
+                        }
+
+                    }
+
+                    p.gpa{
+                        letter-spacing: .3px;
+                    }
+
+                    p.coursework{
+                        color: grey;
+                        opacity: .9;
+                        font-size: 16px;
+
+                        @media screen and (max-width:49em) {
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                
+            }
+        }
+    }
+
+    div.education-list div#\32{
+        display: flex;
+        justify-content: center;
     }
 }

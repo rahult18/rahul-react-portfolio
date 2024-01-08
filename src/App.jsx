@@ -11,6 +11,7 @@ import '../src/app.scss';
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
+import EducationPage from './components/EducationPage';
 
 
 
@@ -133,6 +134,8 @@ const App = () => {
             <ProjectsPage />
             <hr/>
             <SkillsPage />
+            <hr />
+            <EducationPage />
             <hr />
             <ContactMePage />
           </>

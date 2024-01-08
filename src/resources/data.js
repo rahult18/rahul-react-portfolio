@@ -2,6 +2,9 @@ import React from 'react';
 import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 import PhonelinkIcon from '@mui/icons-material/Phonelink';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import { ReactComponent as UBSVG} from './UB.svg';
+import { ReactComponent as VITLOGO } from './vit-logo.svg';
+import srilogo from './sri-logo.png';
 
 export const experienceData = [
     {
@@ -167,4 +170,31 @@ export const certificationData = [
         year: "2020",
         link: "https://drive.google.com/file/d/1pdpsw93k8u9Qav3EAhtmyGRXvqFsihwq/view?usp=sharing"
     },
+]
+
+export const educationData = [
+    {
+        degree:"Master of Science Computer Science",
+        title:"University at Buffalo, New York",
+        year:"August 2023 - Jan 2025",
+        gpa:"3.75 / 4",
+        coursework: "Algorithms, Data Intensive Computing, Machine Learning, Computer Security, Deep Learning",
+        icon: < UBSVG />
+    },
+    {
+        degree:"Bachelor of Technology Computer Science & Engineering",
+        title:"Vellore Institute of Technology, India",
+        year:"July 2019 - July 2023",
+        gpa:"9.09 / 10",
+        coursework:"Parallel & Distributed Computing, Natural Language Processing, Social Network Anaylsis",
+        icon: < VITLOGO />
+    },
+    {
+        degree:"XII (Senior Secondary)",
+        title:"Sri Chaitanya Junior College, India",
+        year:"June 2015 - May 2019",
+        gpa: "96.8%",
+        icon: srilogo
+    }
+    
 ]
