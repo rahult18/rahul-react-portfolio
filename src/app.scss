@@ -8,33 +8,14 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-section {
+section#home, section#about, section#education, section#experience, section#projects, section#skills {
     min-height: 100vh;
     padding-top: 30px;
     padding-bottom: 30px;
-
-    &#home {
-        margin-top: 0;
-    }
 }
 
-hr {
-    position: relative;
-    border: 0;
-    border-top: 1px solid rgba(0, 0, 0, .07);
-    height: 30px;
-    overflow: hidden;
-}
-
-hr::after {
-    content: "";
-    position: absolute;
-    left: 2%;
-    top: 0;
-    width: 96%;
-    height: 1px;
-    background: rgba(255, 255, 255, .08);
-    box-shadow: 0 2px 30px rgba(0, 0, 0, .9);
+section#home {
+    margin-top: 0;
 }
 
 div.home-container {
@@ -105,7 +86,8 @@ section#about {
     justify-content: center;
     align-items: center;
     overflow-y: auto;
-    background-color: rgba(255, 255, 255, .08);
+    // background-color: rgba(255, 255, 255, .08);
+    background-color: rgba(228, 228, 228, 0.3);
 }
 
 div.about-me {
@@ -199,7 +181,7 @@ section#experience {
 section#projects {
     width: 100%;
     padding: 10px;
-    background-color: rgba(255, 255, 255, .08);
+    background-color: rgba(228, 228, 228, 0.3);
 
     div.main-container {
         display: flex;
@@ -478,7 +460,7 @@ section#skills {
 
 section#education {
     padding: 10px;
-    background: rgba(255, 255, 255, .08);
+    background-color: rgba(228, 228, 228, 0.3);
 
     h3.heading {
         font-size: 25px;
@@ -585,5 +567,117 @@ section#education {
     div.education-list div#\32{
         display: flex;
         justify-content: center;
+    }
+}
+
+section#contact-me{
+    // min-height: 35vh;
+    padding:10px;
+    h3.heading {
+        font-size: 25px;
+        margin-left: 20px;
+        font-family: 'Poppins', sans-serif;
+        text-align: left;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        text-align: center;
+
+        @media screen and (max-width: 49em) {
+            font-size: 20px;
+        }
+    }
+
+    div.top-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        margin:10px;
+
+        @media screen and (max-width: 49em) {
+            flex-direction: column;
+        }
+
+        div.item{
+            display: flex;
+            flex-direction: row;
+            margin: 15px;
+
+            div.icon{
+                margin-right:5px;
+
+                svg{
+                    font-size: 3rem;
+                    color:#0984e3;
+                    opacity: .8;
+                   
+                    @media screen and (max-width:49em) {
+                        font-size: 2.2rem;
+                    }
+                }
+            }
+
+            hr{
+                border-color: rgba(0, 0, 0, 0.40);
+                border-width: .95px;
+            }
+
+            div.text{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 5px;
+
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+
+
+        }
+    }
+
+    div.bottom-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a{
+            margin:5px;
+            color: #000;
+            opacity: .75;
+            svg{
+                font-size: 2.5rem;    
+            }
+            &:hover{
+                color: #0984e3;
+                opacity: .9;
+                scale: 1.1;
+                transition: 0.3 ease-in-out;
+            }
+        }
+    }
+
+}
+
+div.footer{
+    width: 100vw;
+    padding: 10px;
+    background-color: #f7f7f7;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+
+    svg{
+        font-size: 15px;
+        margin-right: 5px;
+        @media screen and (max-width:49em) {
+            font-size: 18px;
+        }
     }
 }
