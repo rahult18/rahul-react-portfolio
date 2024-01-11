@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { projectData } from "../resources/data";
+import { motion, useScroll, useTransform } from 'framer-motion';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 const ProjectsPage = () => {
@@ -19,10 +20,27 @@ const ProjectsPage = () => {
         }
     };
 
+    const elementRef = useRef(null);
+
+    const { scrollYProgress } = useScroll({
+        target: elementRef,
+        offset: ["0 1", "1.25 1"],
+    });
+    const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.87, 1]);
+    const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.87, 1]);
+
     return (
         <section id='projects'>
-            <div className="main-container">
-                <div style={{height:"90px"}}></div>
+            <motion.div className="main-container"
+                ref={elementRef}
+                style={{
+                    scale: scaleProgress,
+                    opacity: opacityProgress,
+                }}
+                viewport={{
+                    once: true,
+                }}>
+                <div style={{ height: "90px" }}></div>
                 <h3 className="heading">Projects</h3>
                 <div className="cards">
                     {projectData.map((item, index) => (
@@ -54,8 +72,8 @@ const ProjectsPage = () => {
                         </div>
                     ))}
                 </div>
-            </div>
-            <div style={{height:"50px"}}></div>
+            </motion.div>
+            <div style={{ height: "50px" }}></div>
         </section>
     );
 };
