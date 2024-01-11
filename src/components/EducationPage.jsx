@@ -13,6 +13,7 @@ const EducationPage = () => {
 
   return (
     <section id="education" ref={elementRef}>
+      <div style={{height:"90px"}}></div>
       <h3 className="heading">Education</h3>
       <div className="main-container">
         <div className="education-list">
@@ -41,6 +42,7 @@ const EducationPage = () => {
           ))}
         </div>
       </div>
+      <div style={{height:"70px"}}></div>
     </section>
   );
 };

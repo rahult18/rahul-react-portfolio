@@ -36,6 +36,7 @@ const SkillsPage = () => {
 
     return (
         <section id="skills">
+            <div style={{height:"90px"}}></div>
             <h3 className="heading">Skills & Certifications</h3>
             <div className="main-container">
                 <div className="skills-container">
@@ -86,6 +87,7 @@ const SkillsPage = () => {
                     </div>
                 </div>
             </div>
+            <div style={{height:"30px"}}></div>
         </section>
     );
 }

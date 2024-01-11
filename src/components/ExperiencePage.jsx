@@ -10,6 +10,7 @@ const ExperiencePage = () => {
     return (
         <section id="experience">
             <div className="main-content">
+                <div style={{height:"90px"}}></div>
                 <h3 className="heading">Work Experience</h3>
                 <VerticalTimeline lineColor="#0984e3">
                     {
@@ -51,6 +52,7 @@ const ExperiencePage = () => {
                     }
                 </VerticalTimeline>
             </div>
+            <div style={{height:"50px"}}></div>
         </section>
     );
 }

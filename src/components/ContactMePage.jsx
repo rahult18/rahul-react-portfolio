@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-// import LocationCityIcon from '@mui/icons-material/LocationCity';
-// import EmailIcon from '@mui/icons-material/Email';
 import LanguageIcon from '@mui/icons-material/Language';
 import Divider from '@mui/material/Divider';
 import locationLogo from '../resources/location.svg';
@@ -17,6 +15,7 @@ const ContactMePage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: 'tween', duration: 1, ease: 'easeInOut' }}
         >
+            <div style={{height:"70px"}}></div>
             <h3 className="heading">Get in Touch</h3>
             <div className="top-container">
                 <div className="item">
@@ -48,6 +47,7 @@ const ContactMePage = () => {
                     <LanguageIcon />
                 </a>
             </div>
+            <div style={{height:"70px"}}></div>
         </motion.section>
     );
 };

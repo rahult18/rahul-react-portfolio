@@ -22,6 +22,7 @@ const ProjectsPage = () => {
     return (
         <section id='projects'>
             <div className="main-container">
+                <div style={{height:"90px"}}></div>
                 <h3 className="heading">Projects</h3>
                 <div className="cards">
                     {projectData.map((item, index) => (
@@ -54,6 +55,7 @@ const ProjectsPage = () => {
                     ))}
                 </div>
             </div>
+            <div style={{height:"50px"}}></div>
         </section>
     );
 };
