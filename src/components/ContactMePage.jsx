@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import LocationCityIcon from '@mui/icons-material/LocationCity';
-import EmailIcon from '@mui/icons-material/Email';
+// import LocationCityIcon from '@mui/icons-material/LocationCity';
+// import EmailIcon from '@mui/icons-material/Email';
 import LanguageIcon from '@mui/icons-material/Language';
 import Divider from '@mui/material/Divider';
+import locationLogo from '../resources/location.svg';
+import mailLogo from '../resources/mail.svg';
 
 const ContactMePage = () => {
     return (
@@ -19,7 +21,7 @@ const ContactMePage = () => {
             <div className="top-container">
                 <div className="item">
                     <div className="icon">
-                        <EmailIcon style={{ position: 'relative', top: '2px' }} />
+                        <img src={mailLogo} alt="mail" />
                     </div>
                     <Divider orientation="vertical" variant="middle" flexItem />
                     <div className="text">
@@ -29,7 +31,7 @@ const ContactMePage = () => {
 
                 <div className="item">
                     <div className="icon">
-                        <LocationCityIcon />
+                        <img src={locationLogo} alt="location" />
                     </div>
                     <Divider orientation="vertical" variant="middle" flexItem />
                     <div className="text">Buffalo, New York</div>

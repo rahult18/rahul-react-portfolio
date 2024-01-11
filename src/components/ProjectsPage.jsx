@@ -1,29 +1,21 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useRef } from 'react';
 import { projectData } from "../resources/data";
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 const ProjectsPage = () => {
-    
-    const [expandedCard, setExpandedCard] = useState(null);
+    const [expandContent, setExpandContent] = useState(null);
+    const timeoutRef = useRef(null);
 
-    const handleCardInteraction = (index, screenSize) => {
-        if (screenSize > 768) {
-            // Handle mouse hover for screen sizes greater than 768px
-            setExpandedCard(index);
+    const handleCardInteraction = (index, isMouseEnter) => {
+        if (isMouseEnter) {
+            // Debounce onMouseEnter
+            timeoutRef.current = setTimeout(() => {
+                setExpandContent(index);
+            }, 300);
         } else {
-            // Handle click for screen sizes less than 768px
-            setExpandedCard(expandedCard === index ? null : index);
-        }
-    };
-
-    const handleCardHoverOut = () => {
-        setExpandedCard(null);
-    };
-
-    const handleCardClick = (index, screenSize) => {
-        if (screenSize <= 768) {
-            setExpandedCard(expandedCard === index ? null : index);
+            // Clear the timeout on onMouseLeave
+            clearTimeout(timeoutRef.current);
+            setExpandContent(null);
         }
     };
 
@@ -33,38 +25,32 @@ const ProjectsPage = () => {
                 <h3 className="heading">Projects</h3>
                 <div className="cards">
                     {projectData.map((item, index) => (
-                        <motion.div
+                        <div
                             key={index}
-                            className={`card ${expandedCard === index ? 'expanded' : ''}`}
-                            onMouseEnter={() => handleCardInteraction(index, window.innerWidth)}
-                            onMouseLeave={handleCardHoverOut}
-                            onClick={() => handleCardClick(index, window.innerWidth)}
-                            initial={{ scale: 1 }}
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                            transition={{ duration: 0.3 }}
+                            className={`card ${expandContent === index ? 'expanded' : ''}`}
+                            onMouseEnter={() => handleCardInteraction(index, true)}
+                            onMouseLeave={() => handleCardInteraction(index, false)}
                         >
-                            <img src={item.img} alt={item.title} className="project-img" />
-                            <h3 className="project-title">{item.title}</h3>
-                            <p className="project-stack">{item.stack}</p>
-                            <AnimatePresence mode='wait'>
-                                {expandedCard === index && (
-                                    <motion.div
-                                        className="card-content"
-                                        initial={{ opacity: 0, height: 0 }}
-                                        animate={{ opacity: 1, height: 'auto' }}
-                                        exit={{ opacity: 0, height: 0, transition: { ease: 'easeOut' } }}
-                                        transition={{ duration: 0.3 }}
-                                    >
+                            {expandContent === index ? (
+                                <>
+                                    <h3 className="project-title">{item.title}</h3>
+                                    <p className="project-stack">{item.stack}</p>
+                                    <div className="card-content">
                                         <p className="description">{item.description}</p>
                                         <a href={item.link} target="_blank" rel="noreferrer" className="github">
                                             <GitHubIcon /> &nbsp;
                                             Project Code
                                         </a>
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
-                        </motion.div>
+                                    </div>
+                                </>
+                            ) : (
+                                <>
+                                    <img src={item.img} alt={item.title} className="project-img" />
+                                    <h3 className="project-title">{item.title}</h3>
+                                    <p className="project-stack">{item.stack}</p>
+                                </>
+                            )}
+                        </div>
                     ))}
                 </div>
             </div>

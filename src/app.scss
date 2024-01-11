@@ -8,7 +8,11 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-section#home, section#about, section#education, section#experience, section#projects, section#skills {
+section#home,
+section#about,
+section#experience,
+section#projects,
+section#skills {
     min-height: 100vh;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -224,6 +228,11 @@ section#projects {
 
                 &:hover {
                     transform: scale(1.05);
+                    transition: transform 0.3s ease-in-out;
+                }
+
+                &:hover .card-content:hover {
+                    transition: transform 0.3s ease-in-out;
                 }
 
                 img {
@@ -277,11 +286,6 @@ section#projects {
                             color: #fff;
                         }
                     }
-                }
-
-                &.expanded {
-                    height: auto;
-                    // margin-bottom:10px;
                 }
 
             }
@@ -482,35 +486,35 @@ section#education {
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-bottom:30px;
+        margin-bottom: 30px;
 
         div.education-list {
             display: grid;
-            gap:30px;
+            gap: 30px;
 
             justify-content: center;
             align-items: center;
-            margin-top:30px;
+            margin-top: 30px;
 
-            
+
 
             div.education-item {
                 display: grid;
                 grid-template-columns: 150px 1fr;
-                gap:20px;
+                gap: 20px;
                 align-items: center;
 
                 @media screen and (max-width: 49em) {
                     grid-template-columns: 1fr;
                 }
-                
 
-                div.education-icon svg{
+
+                div.education-icon svg {
                     width: 100%;
                     height: 150px;
                 }
 
-                div.education-icon img{
+                div.education-icon img {
                     width: 225px;
                     height: 225px;
                 }
@@ -525,17 +529,18 @@ section#education {
                         text-align: center;
                     }
 
-                    p.degree{
+                    p.degree {
                         letter-spacing: .4px;
                         color: #0984e3;
                     }
 
-                    p.title{
+                    p.title {
                         letter-spacing: .25px;
                         color: #0984e3;
                     }
 
-                    p.year, p.gpa{
+                    p.year,
+                    p.gpa {
                         font-size: 17px;
 
                         @media screen and (max-width:49em) {
@@ -544,11 +549,11 @@ section#education {
 
                     }
 
-                    p.gpa{
+                    p.gpa {
                         letter-spacing: .3px;
                     }
 
-                    p.coursework{
+                    p.coursework {
                         color: grey;
                         opacity: .9;
                         font-size: 16px;
@@ -559,20 +564,21 @@ section#education {
                     }
                 }
 
-                
+
             }
         }
     }
 
-    div.education-list div#\32{
+    div.education-list div#\32 {
         display: flex;
         justify-content: center;
     }
 }
 
-section#contact-me{
+section#contact-me {
     // min-height: 35vh;
-    padding:10px;
+    padding: 10px;
+
     h3.heading {
         font-size: 25px;
         margin-left: 20px;
@@ -588,49 +594,52 @@ section#contact-me{
         }
     }
 
-    div.top-container{
+    div.top-container {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
         padding: 5px;
-        margin:10px;
+        margin: 10px;
 
         @media screen and (max-width: 49em) {
             flex-direction: column;
         }
 
-        div.item{
+        div.item {
             display: flex;
             flex-direction: row;
             margin: 15px;
 
-            div.icon{
-                margin-right:5px;
+            div.icon {
+                margin-right: 5px;
 
-                svg{
-                    font-size: 3rem;
-                    color:#0984e3;
-                    opacity: .8;
-                   
+                img {
+                    height: 55px;
+                    width: 55px;
+                    margin-right: 5px;
+                    position: relative;
+                    top: 2px;
+
                     @media screen and (max-width:49em) {
-                        font-size: 2.2rem;
+                        height: 50px;
+                        width: 50px;
                     }
                 }
             }
 
-            hr{
+            hr {
                 border-color: rgba(0, 0, 0, 0.40);
                 border-width: .95px;
             }
 
-            div.text{
+            div.text {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 margin-left: 5px;
 
-                a{
+                a {
                     text-decoration: none;
                     color: black;
                 }
@@ -640,19 +649,22 @@ section#contact-me{
         }
     }
 
-    div.bottom-container{
+    div.bottom-container {
         display: flex;
         align-items: center;
         justify-content: center;
 
-        a{
-            margin:5px;
+        a {
+            margin: 5px;
             color: #000;
-            opacity: .75;
-            svg{
-                font-size: 2.5rem;    
+            // opacity: .75;
+
+            svg {
+                height: 50px;
+                width: 50px;
             }
-            &:hover{
+
+            &:hover {
                 color: #0984e3;
                 opacity: .9;
                 scale: 1.1;
@@ -663,7 +675,7 @@ section#contact-me{
 
 }
 
-div.footer{
+div.footer {
     width: 100vw;
     padding: 10px;
     background-color: #f7f7f7;
@@ -673,9 +685,10 @@ div.footer{
     justify-content: center;
     font-size: 15px;
 
-    svg{
+    svg {
         font-size: 15px;
         margin-right: 5px;
+
         @media screen and (max-width:49em) {
             font-size: 18px;
         }

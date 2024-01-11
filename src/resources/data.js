@@ -4,7 +4,7 @@ import PhonelinkIcon from '@mui/icons-material/Phonelink';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import { ReactComponent as UBSVG} from './UB.svg';
 import { ReactComponent as VITLOGO } from './vit-logo.svg';
-import srilogo from './sri-logo.png';
+// import srilogo from './sri-logo.png';
 
 export const experienceData = [
     {
@@ -189,12 +189,12 @@ export const educationData = [
         coursework:"Parallel & Distributed Computing, Natural Language Processing, Social Network Anaylsis",
         icon: < VITLOGO />
     },
-    {
-        degree:"XII (Senior Secondary)",
-        title:"Sri Chaitanya Junior College, India",
-        year:"June 2015 - May 2019",
-        gpa: "96.8%",
-        icon: srilogo
-    }
+    // {
+    //     degree:"XII (Senior Secondary)",
+    //     title:"Sri Chaitanya Junior College, India",
+    //     year:"June 2015 - May 2019",
+    //     gpa: "96.8%",
+    //     icon: srilogo
+    // }
     
 ]
