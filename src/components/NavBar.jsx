@@ -53,7 +53,7 @@ function NavBar() {
                     transition={{ duration: 1 }}
                     className="header__content__logo"
                 >
-                    <Link to="#home">
+                    <Link to="#home" className="text-heading">
                         <IoCodeSlashOutline color="#0984e3" style={{ marginTop: "0.6rem" }} />
                     </Link>
                 </motion.div>

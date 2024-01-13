@@ -1,5 +1,6 @@
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { FiDownload } from "react-icons/fi";
+import { IoLogoLinkedin, IoMdMail, IoLogoGithub } from "react-icons/io";
 
 
 
@@ -31,6 +32,17 @@ const LandingPage = () => {
                             <FiDownload className="icon" />
                             {' '}Download CV
                         </a>
+                    </div>
+                    <div className="social-buttons">
+                    <a href="https://github.com/rahult18" target="_blank" rel="noreferrer" className="github">
+                        < IoLogoGithub />
+                    </a>
+                    <a href="https://www.linkedin.com/in/rahul-reddy-t/" target="_blank" rel="noreferrer" className="linkedin">
+                        <IoLogoLinkedin />
+                    </a>
+                    <a href="mailto:rahul.talatala@gmail.com" className="gmail">
+                        <IoMdMail />
+                    </a>
                     </div>
                 </div>
             </section>
