@@ -100,6 +100,10 @@
                                     //color: #F05A30;
                                     border-bottom: 2px solid #F05A30;
                                 }
+
+                                @media screen and (max-width:49em) {
+                                    border:none;
+                                }
                             }
                         }
                     }

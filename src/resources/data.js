@@ -10,9 +10,9 @@ export const experienceData = [
     {
         title: "Solutions Engineer at Swym Corporation",
         location: "Bangalore, Karnataka, India",
-        description: " • Engineered and customized 30+ bespoke wishlist solutions for e-commerce stores by leveraging REST APIs, thereby optimizing user journeys and aligning with diverse business requirements.\n• Innovated and implemented an internal knowledge base tool, empowering Swym's development and support teams with a comprehensive resource for quick reference, fostering streamlined collaboration and problem-solving.\n • Resolved 8+ caching issues by optimizing in-memory caching on the server-side, resulting in a 12% improvement in response time. This enhancement facilitated faster real-time updates, contributing to an enhanced user experience. \n • Revamped external developer documentation by incorporating code recipes and demos, enriching the content for efficient utilization of REST APIs. This initiative led to a 10% increase in traffic to the developer docs.",
+        description: "• Engineered and customized 30+ bespoke wishlist solutions for e-commerce stores by leveraging REST APIs, thereby optimizing user journeys and aligning with diverse business requirements.\n• Innovated and implemented an internal knowledge base tool, empowering Swym's development and support teams with a comprehensive resource for quick reference, fostering streamlined collaboration and problem-solving.\n • Resolved 8+ caching issues by optimizing in-memory caching on the server-side, resulting in a 12% improvement in response time. This enhancement facilitated faster real-time updates, contributing to an enhanced user experience. \n • Revamped external developer documentation by incorporating code recipes and demos, enriching the content for efficient utilization of REST APIs. This initiative led to a 10% increase in traffic to the developer docs.",
         icon: React.createElement(ShoppingCartCheckoutIcon),
-        date: "September 2022 - August 2023"
+        date: "September 2022 - August 2023",
     },
     {
         title: "Research & Development Intern at Samsung PRISM",
@@ -50,7 +50,7 @@ export const projectData = [
         stack: "Python, Streamlit & Deep Learning",
         description: "An intuitive application with the capability to predict the stock prices and forecast them which is achieved by using RandomForests for predicting the stock trend and LSTM models for forecasting the stocks.",
         img: "https://img.freepik.com/free-vector/stock-market-analysis_23-2148582512.jpg",
-        link: "https://github.com/rahult18/"
+        link: "https://github.com/rahult18/Stock-Market-Prediction-and-Forecasting"
     },
     {
         title: "Employee Research Management System",
@@ -58,6 +58,20 @@ export const projectData = [
         img: "https://www.worktribe.com/wp-content/uploads/2019/08/Worktribe-ethics2.png",
         description: "Employee research management system is a website built using CSS, Bootstrap, JS and PHP where the students can view the research details of the particular faculty and choose them as the guide for their final year project.",
         link: "https://github.com/rahult18/Employee-Research-Progress-Management-System"
+    },
+    {
+        title:"Story Generator",
+        stack: "Neural Networks, Python & Pandas",
+        img: "https://ambcrypto.com/blog/wp-content/uploads/2023/05/10937969_19521596-scaled.jpg",
+        description: "The project utilizes advanced NLP techniques to autonomously generate stories with a bidirectional LSTM network & bidirectional GRU models, achieving a 79% accuracy. Trained on a diverse dataset, the model showcases potential for expanding into automatic generation of news, articles, jokes, or posts.",
+        link: "https://github.com/rahult18/Story-Generation-using-LSTM-and-GRU"
+    },
+    {
+        title:"Social Network Analysis of Air Traffic to and from India",
+        stack:"Python, Pandas, & SNA",
+        img: "https://t4.ftcdn.net/jpg/03/01/44/23/360_F_301442391_r5NN2O6fFa4koeBRdwYSvCgeUe78987r.jpg",
+        description: "The project utilizes SNA to comprehensively analyze global air travel dynamics and assess India's position in the aviation market. The methodology involves data gathering from openflights, visual representation of the network, and application of SNA metrics and ranking algorithms to identify major airports.",
+        link: "https://github.com/rahult18/Social-Network-Anaylsis-of-Air-Traffic-to-and-from-India"
     }
 ]
 

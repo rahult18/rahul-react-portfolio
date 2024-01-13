@@ -1,11 +1,10 @@
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { FiDownload } from "react-icons/fi";
-import { Link } from 'react-router-dom';
 
 
 
 const LandingPage = () => {
-    const [ text ] = useTypewriter({
+    const [text] = useTypewriter({
         words: ['CS Graduate', 'Full Stack Developer', 'Data Alchemist', 'Technophile'],
         loop: true,
         typeSpeed: 100,
@@ -17,7 +16,7 @@ const LandingPage = () => {
             <section id="home">
                 <div className="home-container">
                     <div className="intro">
-                        Heya! <br /> 
+                        Heya! <br />
                         I'm Rahul Reddy Talatala <br />
                     </div>
                     <div className="typing-effect">
@@ -25,13 +24,13 @@ const LandingPage = () => {
                         <span className="typing-result">
                             {text}
                         </span>
-                            <Cursor cursorStyle="|" />
+                        <Cursor cursorStyle="|" />
                     </div>
                     <div className="download-cv">
-                        <Link to="https://drive.google.com/file/d/1iFuEeoXRrTZJlVF5l_kJJK5Jf6L4JKur/view?usp=sharing" className="button" target="_blank">
-                            <FiDownload className="icon"/>
+                        <a href="https://drive.google.com/uc?export=download&id=1iFuEeoXRrTZJlVF5l_kJJK5Jf6L4JKur" className="button" download="Rahul Reddy Talatala Resume.pdf">
+                            <FiDownload className="icon" />
                             {' '}Download CV
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </section>
