@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { projectData } from "../resources/data";
 import { motion, useScroll, useTransform } from 'framer-motion';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import ReplayOutlinedIcon from '@mui/icons-material/ReplayOutlined';
 
 const ProjectsPage = () => {
     const [expandContent, setExpandContent] = useState(null);
@@ -73,6 +74,12 @@ const ProjectsPage = () => {
                     ))}
                 </div>
             </motion.div>
+            <div className="load-more">
+                <a href="https://github.com/rahult18?tab=repositories" target="_blank" rel="noreferrer" className="button">
+                    <ReplayOutlinedIcon className="icon" />
+                    {' '} <span className="text">Load More</span>
+                </a>
+            </div>
             <div style={{ height: "50px" }}></div>
         </section>
     );
