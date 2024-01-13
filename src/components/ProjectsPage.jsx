@@ -37,11 +37,12 @@ const ProjectsPage = () => {
                 style={{
                     scale: scaleProgress,
                     opacity: opacityProgress,
+                    fontFamily: "'Montserrat', sans-serif",
                 }}
                 viewport={{
                     once: true,
                 }}>
-                <div style={{ height: "90px" }}></div>
+                <div style={{ height: "40px" }}></div>
                 <h3 className="heading">Projects</h3>
                 <div className="cards">
                     {projectData.map((item, index) => (
