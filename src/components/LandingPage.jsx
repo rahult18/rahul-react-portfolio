@@ -6,7 +6,7 @@ import { IoLogoLinkedin, IoMdMail, IoLogoGithub } from "react-icons/io";
 
 const LandingPage = () => {
     const [text] = useTypewriter({
-        words: ['CS Graduate', 'Full Stack Developer', 'Data Alchemist', 'Technophile'],
+        words: ['CS Graduate', 'Full Stack Developer', 'Software Engineer', 'Data Alchemist', 'Technophile'],
         loop: true,
         typeSpeed: 100,
         deleteSpeed: 70,
@@ -28,7 +28,7 @@ const LandingPage = () => {
                         <Cursor cursorStyle="|" />
                     </div>
                     <div className="download-cv">
-                        <a href="https://drive.google.com/uc?export=download&id=1iFuEeoXRrTZJlVF5l_kJJK5Jf6L4JKur" className="button" download="Rahul Reddy Talatala Resume.pdf">
+                        <a href="https://drive.google.com/file/d/1sApQqmgo3pA5UPS_3Y1hi65PhVzGoSx7/view?usp=drive_link" className="button" download="Rahul Reddy Talatala Resume.pdf">
                             <FiDownload className="icon" />
                             {' '}Download CV
                         </a>
