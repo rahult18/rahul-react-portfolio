@@ -6,7 +6,7 @@ import { IoLogoLinkedin, IoMdMail, IoLogoGithub } from "react-icons/io";
 
 const LandingPage = () => {
     const [text] = useTypewriter({
-        words: ['CS Graduate', 'Full Stack Developer', 'Software Engineer', 'Data Alchemist', 'Technophile'],
+        words: ['Software Developer', 'AI Engineer', 'Data Alchemist', 'Technophile'],
         loop: true,
         typeSpeed: 100,
         deleteSpeed: 70,
