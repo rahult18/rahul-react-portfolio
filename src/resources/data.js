@@ -4,6 +4,8 @@ import PhonelinkIcon from '@mui/icons-material/Phonelink';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import { ReactComponent as UBSVG} from './UB.svg';
 import { ReactComponent as VITLOGO } from './vit-logo.svg';
+import EngineeringIcon from '@mui/icons-material/Engineering';
+import SchoolIcon from '@mui/icons-material/School';
 // import srilogo from './sri-logo.png';
 
 export const experienceData = [
