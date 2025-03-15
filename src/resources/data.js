@@ -8,11 +8,25 @@ import { ReactComponent as VITLOGO } from './vit-logo.svg';
 
 export const experienceData = [
     {
-        title: "Solutions Engineer at Swym Corporation",
+        title: "Software Development Engineer at Eminent Services Corporation",
+        location: "Frederick, MD",
+        description: "• Converted legacy VB6 application into MERN stack with modular React components, improving scalability by 35% and reducing maintenance efforts by 40%.\n• Built cloud-native deployment pipeline using Azure Pipelines and App Service, reducing deployment time by 30%.\n• Designed data migration plan with schema evolution and event logging, reducing manual cleanup by 75%.",
+        icon: React.createElement(EngineeringIcon),
+        date: "Aug 2023 - Present",
+    },
+    {
+        title: "ML Research Assistant at University at Buffalo",
+        location: "Buffalo, NY",
+        description: "• Reduced GPT-2 energy consumption by 19.8% through quantization techniques while maintaining model accuracy.\n• Explored combined distillation and quantization methods, achieving 45.2% lower emissions in language model training.\n• Published findings in departmental research paper and presented optimization techniques at graduate research symposium.",
+        icon: React.createElement(SchoolIcon),
+        date: "Jan. 2024 - May 2024",
+    },
+    {
+        title: "Software Development Engineer at Swym Corporation",
         location: "Bangalore, Karnataka, India",
         description: "• Engineered and customized 30+ bespoke wishlist solutions for e-commerce stores by leveraging REST APIs, thereby optimizing user journeys and aligning with diverse business requirements.\n• Innovated and implemented an internal knowledge base tool, empowering Swym's development and support teams with a comprehensive resource for quick reference, fostering streamlined collaboration and problem-solving.\n • Resolved 8+ caching issues by optimizing in-memory caching on the server-side, resulting in a 12% improvement in response time. This enhancement facilitated faster real-time updates, contributing to an enhanced user experience. \n • Revamped external developer documentation by incorporating code recipes and demos, enriching the content for efficient utilization of REST APIs. This initiative led to a 10% increase in traffic to the developer docs.",
         icon: React.createElement(ShoppingCartCheckoutIcon),
-        date: "September 2022 - August 2023",
+        date: "March 2022 - August 2023",
     },
     {
         title: "Research & Development Intern at Samsung PRISM",
